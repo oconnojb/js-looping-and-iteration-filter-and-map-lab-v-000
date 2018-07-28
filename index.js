@@ -23,3 +23,16 @@ function exactMatch(arr, kvp) {
     return dr[key] === val;
   })
 }
+
+function exactMatchToList(arr, kvp) {
+  let key = Object.keys(kvp)[0];
+  let val = kvp[key];
+
+  let filtered = arr.filter( function (dr) {
+    return dr[key] === val;
+  })
+
+  return filtered.map( function (dr) {
+    return dr['name'];
+  })
+}
